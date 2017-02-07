@@ -30,8 +30,8 @@ while True:
         break
     for item in apart_list:
         apart = []
-        apart.append(url+item.find('a').get('href')).strip()
-        apart.append(url+item.find('img').get('src')).strip()
+        apart.append(url+item.find('a').get('href'));
+        apart.append(url+item.find('img').get('src'))
         apart.append(''.join(item.find('div', {'class': 'object_price'}).findAll(text=True)).strip())
         apart.append(''.join(item.find('div', {'class': 'object_title'}).findAll(text=True)).strip())
         ul = item.find('ul').findAll('li')
